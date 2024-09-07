@@ -3,7 +3,7 @@
 Bem-vindo ao projeto Sistema Solar! Este projeto é uma aplicação web que fornece informações sobre os planetas do sistema solar, permitindo que você explore e aprenda mais sobre cada um deles. Desenvolvido com o auxilio do Gemini
 
 Clique aqui para visualizar (https://solar-alura-dev.vercel.app/)
-![Visualização do Site!](https://github.com/JohnFrankkk/SolarAluraDev/imagens/printsite.png)
+![Visualização do Site!](https://github.com/JohnFrankkk/SolarAluraDev/blob/main/printsite.png)
 ## Visão Geral
 
 Este projeto permite a busca por planetas do sistema solar e exibe informações detalhadas sobre cada um deles. Ele é construído usando HTML, CSS e JavaScript para uma experiência interativa e educativa.
