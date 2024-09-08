@@ -3,44 +3,43 @@
 
 /* Estiliza o corpo da página */
 body {
-    font-family: "Poppins", sans-serif; /* Define a fonte da página */
-    background: url('imagens/fundo.png') no-repeat center center fixed; /* Define o fundo da página */
-    background-size: cover; /* Faz com que a imagem de fundo cubra toda a tela */
-    background-color: rgba(0, 0, 0, 0.7); /* Adiciona uma camada escura ao fundo */
-    display: flex; /* Usa flexbox para centralizar o conteúdo */
-    flex-direction: column; /* Organiza o conteúdo em coluna */
-    align-items: center; /* Alinha o conteúdo horizontalmente ao centro */
-    justify-content: center; /* Alinha o conteúdo verticalmente ao centro */
-    height: 100vh; /* Faz o corpo da página ocupar toda a altura da janela */
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o preenchimento padrão */
-    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse o corpo da página */
-    position: relative; /* Define o posicionamento relativo para elementos internos */
-    color: #fff; /* Define a cor do texto como branca */
+    font-family: "Poppins", sans-serif;
+    background: rgba(0, 0, 0, 0.7) url('imagens/fundo.png') no-repeat center center fixed; /* Fundo mais escuro */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
 }
 
 /* Centraliza a seção de resultados */
 section {
-    display: flex; /* Usa flexbox para centralizar os itens */
-    flex-direction: column; /* Organiza os itens em coluna */
-    align-items: center; /* Alinha os itens horizontalmente ao centro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-/* Estiliza o título principal da página com animações */
+/* Estiliza o título principal */
 h1 {
-    font-size: 3rem; /* Define o tamanho da fonte do título */
-    color: #fff; /* Define a cor do texto como branca */
-    letter-spacing: 0.5rem; /* Define o espaçamento entre letras */
-    text-align: center; /* Alinha o texto ao centro */
-    animation: changeColor 4s infinite, sparkLetters 2s infinite; /* Adiciona animações de mudança de cor e faíscas */
-    margin-bottom: 2rem; /* Adiciona uma margem inferior */
-    font-weight: 700; /* Define o peso da fonte como negrito */
-    text-transform: uppercase; /* Converte o texto para maiúsculas */
-    position: relative; /* Define o posicionamento relativo para o título */
-    z-index: 1; /* Define o índice z para sobrepor outros elementos */
+    font-size: 2.5rem;
+    color: #fff;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    animation: changeColor 4s infinite, sparkLetters 2s infinite;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
 }
 
-/* Animação para mudança de cor do título */
 @keyframes changeColor {
     0% { color: #f8b400; }
     25% { color: #6a0572; }
@@ -49,7 +48,6 @@ h1 {
     100% { color: #f8b400; }
 }
 
-/* Animação de faíscas ao redor das letras do título */
 @keyframes sparkLetters {
     0%, 100% {
         text-shadow: 0 0 15px rgba(248, 180, 0, 0.4), 0 0 30px rgba(106, 5, 114, 0.2);
@@ -61,168 +59,184 @@ h1 {
 
 /* Estiliza o campo de pesquisa */
 section input {
-    width: 20rem; /* Define a largura do campo de pesquisa */
-    padding: 0.6rem; /* Adiciona preenchimento interno ao campo de pesquisa */
-    border: 3px solid rgba(255, 255, 255, 0.5); /* Define a borda do campo de pesquisa */
-    border-radius: 20px; /* Adiciona bordas arredondadas */
-    font-size: 1rem; /* Define o tamanho da fonte no campo de pesquisa */
-    color: #000; /* Define a cor do texto no campo de pesquisa */
-    background-color: rgba(255, 255, 255, 0.8); /* Define a cor de fundo do campo de pesquisa com leve transparência */
-    box-sizing: border-box; /* Inclui o preenchimento e a borda no cálculo da largura total */
-    transition: border 0.5s ease, box-shadow 0.5s ease; /* Adiciona uma transição suave para borda e sombra */
-    margin-bottom: 1.5rem; /* Adiciona uma margem inferior */
-    text-align: center; /* Alinha o texto ao centro */
-    font-family: 'Poppins', sans-serif; /* Define a fonte do texto no campo de pesquisa */
+    width: 80%;
+    max-width: 300px;
+    padding: 0.6rem;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+    transition: border 0.5s ease, box-shadow 0.5s ease;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
-/* Estiliza o campo de pesquisa ao receber foco */
 section input:focus {
-    border-color: rgba(255, 255, 255, 0.8); /* Muda a cor da borda ao focar */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.3); /* Adiciona uma sombra ao focar */
-    outline: none; /* Remove o contorno padrão ao focar */
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.3);
+    outline: none;
 }
 
 /* Estiliza o botão "Explorar" */
 section button {
-    padding: 1rem 2rem; /* Adiciona preenchimento interno ao botão */
-    border: none; /* Remove a borda padrão do botão */
-    border-radius: 10px; /* Adiciona bordas arredondadas ao botão */
-    background-color: #000; /* Define a cor de fundo do botão como preta */
-    color: #fff; /* Define a cor do texto no botão como branca */
-    font-size: 1rem; /* Define o tamanho da fonte no botão */
-    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
-    transition: all 0.5s ease; /* Adiciona uma transição suave para todas as propriedades */
-    position: relative; /* Define o posicionamento relativo para o botão */
-    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse o botão */
-    z-index: 1; /* Define o índice z para sobrepor outros elementos */
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-/* Estiliza o botão ao passar o mouse */
 section button:hover {
-    transform: scale(1.1); /* Aumenta levemente o tamanho do botão */
-    background-color: #000; /* Mantém a cor de fundo preta */
-    color: #fff; /* Mantém a cor do texto branca */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4); /* Adiciona uma sombra ao passar o mouse */
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
-/* Adiciona uma animação de fumaça ao botão */
+/* Efeito de fumaça no botão */
 section button::before {
-    content: ''; /* Adiciona um pseudo-elemento antes do conteúdo do botão */
-    position: absolute; /* Define o posicionamento absoluto para o pseudo-elemento */
-    top: -50%; /* Posiciona o pseudo-elemento acima do botão */
-    left: -50%; /* Posiciona o pseudo-elemento à esquerda do botão */
-    width: 200%; /* Define a largura do pseudo-elemento */
-    height: 200%; /* Define a altura do pseudo-elemento */
-    background: radial-gradient(circle, transparent, rgba(255,255,255,0.2), transparent); /* Adiciona um gradiente radial para o efeito de fumaça */
-    z-index: -1; /* Define o índice z para estar atrás do botão */
-    transition: 0.5s ease; /* Adiciona uma transição suave para a opacidade */
-    opacity: 0; /* Define a opacidade inicial como zero */
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, transparent, rgba(255,255,255,0.2), transparent);
+    z-index: -1;
+    transition: 0.5s ease;
+    opacity: 0;
 }
 
-/* Estiliza o efeito de fumaça no botão ao passar o mouse */
 section button:hover::before {
-    opacity: 1; /* Torna o efeito de fumaça visível ao passar o mouse */
+    opacity: 1;
 }
 
-/* Estiliza a caixa de resultados */
+/* Caixa de resultados */
 .resultados-pesquisa {
-    width: 60rem; /* Define a largura da caixa de resultados */
-    height: 46vh; /* Define a altura da caixa de resultados como 46% da altura da viewport */
-    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
-    margin-top: 1rem; /* Adiciona uma margem superior */
-    padding: 1rem; /* Adiciona preenchimento interno */
-    border-radius: 10px; /* Adiciona bordas arredondadas */
-    background-color: rgba(0, 0, 0, 0); /* Fundo inicialmente invisível */
-    box-shadow: 0 0 0 rgba(255, 255, 255, 0); /* Sombra inicialmente invisível */
-    border: 2px solid rgba(255, 255, 255, 0); /* Borda inicialmente invisível */
-    transition: all 0.5s ease; /* Adiciona uma transição suave para todas as propriedades */
-    display: flex; /* Usa flexbox para organizar os itens */
-    flex-direction: column; /* Organiza os itens em coluna */
-    align-items: center; /* Alinha os itens horizontalmente ao centro */
+    width: 90%;
+    max-width: 60rem;
+    height: 46vh;
+    overflow-y: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    border: 2px solid rgba(255, 255, 255, 0);
+    transition: all 0.5s ease;
+    position: relative;
 }
 
-/* Adiciona sombra e borda à caixa de resultados ao passar o mouse */
-.resultados-pesquisa:hover {
-    background-color: rgba(0, 0, 0, 0.4); /* Adiciona uma cor de fundo com opacidade ao passar o mouse */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4); /* Adiciona uma sombra ao passar o mouse */
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Adiciona uma borda com opacidade ao passar o mouse */
+.resultados-pesquisa.aparecer {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
-/* Estiliza os itens de resultado */
+.resultados-pesquisa::-webkit-scrollbar {
+    width: 0;
+}
+
+.resultados-pesquisa::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+/* Itens de resultado */
 .item-resultado {
-    display: flex; /* Usa flexbox para organizar os itens */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    width: 100%; /* Faz o item de resultado ocupar toda a largura */
-    padding: 1rem; /* Adiciona preenchimento interno */
-    margin-bottom: 1rem; /* Adiciona uma margem inferior */
-    background-color: rgba(255, 255, 255, 0.1); /* Define a cor de fundo do item de resultado */
-    border-radius: 10px; /* Adiciona bordas arredondadas */
-    transition: all 0.5s ease; /* Adiciona uma transição suave para todas as propriedades */
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.5s ease;
 }
 
-/* Estiliza os itens de resultado ao passar o mouse */
-.item-resultado:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Adiciona uma cor de fundo mais clara ao passar o mouse */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2); /* Adiciona uma sombra ao passar o mouse */
-}
-
-/* Estiliza as imagens nos itens de resultado */
 .item-resultado img {
-    width: 150px; /* Define a largura da imagem */
-    height: 150px; /* Define a altura da imagem */
-    margin-right: 1.5rem; /* Adiciona uma margem à direita da imagem */
-    border-radius: 50%; /* Adiciona bordas arredondadas para fazer a imagem ficar circular */
-    object-fit: cover; /* Faz com que a imagem se ajuste ao contêiner sem distorcer */
-    transition: all 0.5s ease; /* Adiciona uma transição suave para todas as propriedades */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
 }
 
-/* Estiliza o conteúdo dos itens de resultado */
-.item-resultado .texto-resultado {
-    font-size: 1.2rem; /* Define o tamanho da fonte do texto de resultado */
-    color: #fff; /* Define a cor do texto de resultado como branca */
-    font-weight: 400; /* Define o peso da fonte como normal */
+.item-resultado img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+    animation: smokeEffect 1.5s infinite;
 }
 
-/* Estiliza o nome do item no resultado */
-.item-resultado .texto-resultado h3 {
-    font-size: 1.5rem; /* Define o tamanho da fonte do nome do item */
-    margin: 0; /* Remove a margem padrão */
+@keyframes smokeEffect {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
-/* Estiliza a descrição do item no resultado */
-.item-resultado .texto-resultado p {
-    margin: 0.5rem 0 0 0; /* Adiciona uma margem superior */
-    font-size: 1rem; /* Define o tamanho da fonte da descrição */
-    color: rgba(255, 255, 255, 0.7); /* Define a cor da descrição com opacidade */
+.item-resultado h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
-/* Responsividade para telas pequenas */
+.item-resultado a {
+    text-decoration: none;
+    color: #f8b400;
+    font-size: 1rem;
+}
+
+.item-resultado a:hover {
+    text-decoration: underline;
+}
+
+/* Estiliza o rodapé */
+footer {
+    background-color: transparent;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem; /* Reduz o tamanho do título */
-        letter-spacing: 0.3rem; /* Reduz o espaçamento entre letras */
-    }
-    
-    section input {
-        width: 15rem; /* Reduz a largura do campo de pesquisa */
-        font-size: 0.9rem; /* Reduz o tamanho da fonte no campo de pesquisa */
+        font-size: 2rem;
+        letter-spacing: 0.3rem;
     }
 
-    section button {
-        padding: 0.8rem 1.5rem; /* Ajusta o tamanho do botão */
-        font-size: 0.9rem; /* Reduz o tamanho da fonte do botão */
+    section input {
+        width: 110%;
     }
 
     .resultados-pesquisa {
-        width: 90%; /* Ajusta a largura da caixa de resultados para ocupar mais espaço */
+        width: 90%;
+        position: relative;
     }
 
-    .item-resultado {
-        padding: 0.8rem; /* Reduz o preenchimento dos itens de resultado */
+    .item-resultado h2 {
+        font-size: 1rem;
     }
 
     .item-resultado img {
-        width: 100px; /* Reduz a largura da imagem */
-        height: 100px; /* Reduz a altura da imagem */
+        width: 80px;
+        height: 80px;
     }
 }
