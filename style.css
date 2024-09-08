@@ -6,6 +6,7 @@ body {
     font-family: "Poppins", sans-serif; /* Define a fonte da página */
     background: url('imagens/fundo.png') no-repeat center center fixed; /* Define o fundo da página */
     background-size: cover; /* Faz com que a imagem de fundo cubra toda a tela */
+    background-color: rgba(0, 0, 0, 0.7); /* Adiciona uma camada escura ao fundo */
     display: flex; /* Usa flexbox para centralizar o conteúdo */
     flex-direction: column; /* Organiza o conteúdo em coluna */
     align-items: center; /* Alinha o conteúdo horizontalmente ao centro */
@@ -135,95 +136,93 @@ section button:hover::before {
     box-shadow: 0 0 0 rgba(255, 255, 255, 0); /* Sombra inicialmente invisível */
     border: 2px solid rgba(255, 255, 255, 0); /* Borda inicialmente invisível */
     transition: all 0.5s ease; /* Adiciona uma transição suave para todas as propriedades */
-    position: relative; /* Define o posicionamento relativo para a caixa */
-}
-
-/* Estilo da caixa de resultados quando visível */
-.resultados-pesquisa.aparecer {
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com leve transparência */
-    border: 2px solid #fff; /* Borda branca */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Sombra branca */
-}
-
-/* Remove as setas de rolagem da caixa de resultados */
-.resultados-pesquisa::-webkit-scrollbar {
-    width: 0; /* Remove a largura da barra de rolagem */
-}
-
-.resultados-pesquisa::-webkit-scrollbar-thumb {
-    background: transparent; /* Torna o "polegar" da barra de rolagem transparente */
-}
-
-/* Estiliza cada item de resultado */
-.item-resultado {
-    background: rgba(0, 0, 0, 0.8); /* Fundo preto com leve transparência */
-    border: 1px solid #fff; /* Borda branca */
-    border-radius: 10px; /* Adiciona bordas arredondadas */
-    padding: 1rem; /* Adiciona preenchimento interno */
-    margin-bottom: 1rem; /* Adiciona uma margem inferior */
-    color: #fff; /* Define a cor do texto como branca */
-    display: flex; /* Usa flexbox para layout interno */
+    display: flex; /* Usa flexbox para organizar os itens */
     flex-direction: column; /* Organiza os itens em coluna */
     align-items: center; /* Alinha os itens horizontalmente ao centro */
-    text-align: center; /* Alinha o texto ao centro */
-    transition: all 0.5s ease; /* Adiciona uma transição suave para todas as propriedades */
 }
 
-/* Estiliza as imagens dos itens de resultado */
-.item-resultado img {
-    width: 120px; /* Define a largura da imagem */
-    height: 120px; /* Define a altura da imagem */
-    border-radius: 50%; /* Adiciona bordas arredondadas em forma de círculo */
-    margin-bottom: 20px; /* Adiciona uma margem inferior */
-    transition: all 0.5s ease; /* Adiciona uma transição suave para todas as propriedades */
-}
-
-/* Adiciona animação de fumaça na imagem dos itens de resultado ao passar o mouse */
-.item-resultado img:hover {
-    transform: scale(1.1); /* Aumenta levemente o tamanho da imagem */
+/* Adiciona sombra e borda à caixa de resultados ao passar o mouse */
+.resultados-pesquisa:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* Adiciona uma cor de fundo com opacidade ao passar o mouse */
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4); /* Adiciona uma sombra ao passar o mouse */
-    animation: smokeEffect 1.5s infinite; /* Adiciona animação de fumaça */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Adiciona uma borda com opacidade ao passar o mouse */
 }
 
-/* Define a animação de fumaça na imagem */
-@keyframes smokeEffect {
-    0%, 100% {
-        opacity: 0.6; /* Define a opacidade inicial e final */
+/* Estiliza os itens de resultado */
+.item-resultado {
+    display: flex; /* Usa flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    width: 100%; /* Faz o item de resultado ocupar toda a largura */
+    padding: 1rem; /* Adiciona preenchimento interno */
+    margin-bottom: 1rem; /* Adiciona uma margem inferior */
+    background-color: rgba(255, 255, 255, 0.1); /* Define a cor de fundo do item de resultado */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    transition: all 0.5s ease; /* Adiciona uma transição suave para todas as propriedades */
+}
+
+/* Estiliza os itens de resultado ao passar o mouse */
+.item-resultado:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Adiciona uma cor de fundo mais clara ao passar o mouse */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2); /* Adiciona uma sombra ao passar o mouse */
+}
+
+/* Estiliza as imagens nos itens de resultado */
+.item-resultado img {
+    width: 150px; /* Define a largura da imagem */
+    height: 150px; /* Define a altura da imagem */
+    margin-right: 1.5rem; /* Adiciona uma margem à direita da imagem */
+    border-radius: 50%; /* Adiciona bordas arredondadas para fazer a imagem ficar circular */
+    object-fit: cover; /* Faz com que a imagem se ajuste ao contêiner sem distorcer */
+    transition: all 0.5s ease; /* Adiciona uma transição suave para todas as propriedades */
+}
+
+/* Estiliza o conteúdo dos itens de resultado */
+.item-resultado .texto-resultado {
+    font-size: 1.2rem; /* Define o tamanho da fonte do texto de resultado */
+    color: #fff; /* Define a cor do texto de resultado como branca */
+    font-weight: 400; /* Define o peso da fonte como normal */
+}
+
+/* Estiliza o nome do item no resultado */
+.item-resultado .texto-resultado h3 {
+    font-size: 1.5rem; /* Define o tamanho da fonte do nome do item */
+    margin: 0; /* Remove a margem padrão */
+}
+
+/* Estiliza a descrição do item no resultado */
+.item-resultado .texto-resultado p {
+    margin: 0.5rem 0 0 0; /* Adiciona uma margem superior */
+    font-size: 1rem; /* Define o tamanho da fonte da descrição */
+    color: rgba(255, 255, 255, 0.7); /* Define a cor da descrição com opacidade */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Reduz o tamanho do título */
+        letter-spacing: 0.3rem; /* Reduz o espaçamento entre letras */
     }
-    50% {
-        opacity: 1; /* Define a opacidade máxima no meio da animação */
+    
+    section input {
+        width: 15rem; /* Reduz a largura do campo de pesquisa */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte no campo de pesquisa */
     }
-}
 
-/* Estiliza os títulos dentro dos itens de resultado */
-.item-resultado h2 {
-    font-size: 1.5rem; /* Define o tamanho da fonte dos títulos */
-    color: #fff; /* Define a cor do texto como branca */
-    margin-bottom: 10px; /* Adiciona uma margem inferior */
-}
+    section button {
+        padding: 0.8rem 1.5rem; /* Ajusta o tamanho do botão */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte do botão */
+    }
 
-/* Estiliza os links dentro dos itens de resultado */
-.item-resultado a {
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #f8b400; /* Define a cor do texto dos links */
-    font-size: 1rem; /* Define o tamanho da fonte dos links */
-}
+    .resultados-pesquisa {
+        width: 90%; /* Ajusta a largura da caixa de resultados para ocupar mais espaço */
+    }
 
-.item-resultado a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre o link */
-}
+    .item-resultado {
+        padding: 0.8rem; /* Reduz o preenchimento dos itens de resultado */
+    }
 
-/* Estiliza o rodapé da página */
-footer {
-    background-color: transparent; /* Define o fundo como transparente */
-    color: #ffffff; /* Define a cor do texto como branca */
-    text-align: center; /* Alinha o texto ao centro */
-    font-size: 0.8rem; /* Define o tamanho da fonte do rodapé */
-    position: absolute; /* Define o posicionamento absoluto para o rodapé */
-    bottom: 0; /* Posiciona o rodapé na parte inferior da página */
-    width: 100%; /* Faz o rodapé ocupar toda a largura da página */
-    padding-bottom: 10px; /* Adiciona um preenchimento inferior */
-    opacity: 0.6; /* Define a opacidade do rodapé */
-    transition: opacity 0.3s ease; /* Adiciona uma transição suave para a opacidade */
-    z-index: -1; /* Define o índice z para não sobrepor outros elementos */
+    .item-resultado img {
+        width: 100px; /* Reduz a largura da imagem */
+        height: 100px; /* Reduz a altura da imagem */
+    }
 }
